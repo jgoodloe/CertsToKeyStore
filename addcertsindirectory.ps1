@@ -13,8 +13,15 @@
     Adds all .crt files from the specified directory to the Trusted Root Certification Authorities store.
 
 .NOTES
-    Author: Your Name
-    Date: $(Get-Date -Format yyyy-MM-dd)
+    Author: Jason Goodloe
+    Date: 20250210
+    Determine Policy 
+    Get-ExecutionPolicy
+    Set-ExecutionPolicy Unrestricted -Scope CurrentUser -Force
+
+    Return Policy - change RemoteSigned to value obtained from Get-ExecutionPolicy
+    Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+    Get-ExecutionPolicy
 #>
 
 param (
